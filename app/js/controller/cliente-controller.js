@@ -6,7 +6,7 @@ class clienteController {
     }
     inserir(evento) {
         evento.preventDefault();
-        let novoCliente = new Cliente(this.nomeElement.value, this.cpfElement.value);
+        let novoCliente = new Cliente(this.nomeElement.value, this.cpfElement.value, null); //Facilitando a criação de um cliente a partir da página.
         this.clientes.inserir(novoCliente);
         this.inserirClienteNoHTML(novoCliente);
     }

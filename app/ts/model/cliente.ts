@@ -4,9 +4,10 @@ class Cliente {
     private _cpf: string;
     private _conta: Conta;
 
-    constructor(nome:string, cpf:string) {
+    constructor(nome:string, cpf:string, conta: Conta) {
         this.nome = nome;
         this._cpf = cpf;
+        this._conta = conta;
     }
 
     get nome(): string {
@@ -34,7 +35,7 @@ class Cliente {
     }
 
     toString(): string {
-        return this._nome + ' ' + this._cpf + ' ' + this._conta;
+        return 'Nome: ' + this._nome + ' CPF: ' + this._cpf + ' ' + this._conta + ' \n';
     }
 
 }

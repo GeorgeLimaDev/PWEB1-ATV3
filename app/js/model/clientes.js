@@ -13,6 +13,7 @@ class Clientes {
         if (clienteARemover) {
             const indiceCliente = this.clientes.indexOf(clienteARemover);
             if (indiceCliente > -1) {
+                console.log(`Cliente removido: ${clienteARemover.nome}`);
                 this.clientes.splice(indiceCliente, 1);
             }
         }

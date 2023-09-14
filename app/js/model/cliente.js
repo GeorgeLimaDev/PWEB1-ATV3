@@ -1,7 +1,8 @@
 class Cliente {
-    constructor(nome, cpf) {
+    constructor(nome, cpf, conta) {
         this.nome = nome;
         this._cpf = cpf;
+        this._conta = conta;
     }
     get nome() {
         return this._nome;
@@ -22,6 +23,6 @@ class Cliente {
         this._conta = novaConta;
     }
     toString() {
-        return this._nome + ' ' + this._cpf + ' ' + this._conta;
+        return 'Nome: ' + this._nome + ' CPF: ' + this._cpf + ' ' + this._conta + ' \n';
     }
 }
