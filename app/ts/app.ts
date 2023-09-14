@@ -20,7 +20,7 @@ let clientes = new Clientes();
 //Manipulando a classe Clientes:
 //Inserir:
 let novoCliente = new Cliente('George', '123456789', new Conta("111", 5000));
-let novoCliente2 = new Cliente('Amanda', '123456000', new Conta("222", 3000));
+let novoCliente2 = new Cliente('Amanda', '123456000', new Conta("222", 1000000));
 let novoCliente3 = new Cliente('Ianzin', '123456111', new Conta("333", 5000));
 clientes.inserir(novoCliente);
 clientes.inserir(novoCliente2);
