@@ -25,3 +25,9 @@ console.log(clientes.pesquisar('123456789'));
 clientes.remover('123456111');
 //Confirmando a remoção:
 console.log(clientes.toString());
+//Testando cliente Especial:
+let clienteEspecial = new ClienteEspecial('Gabrielly', '123123123', new Conta('888', 7500));
+console.log(clienteEspecial.toString());
+//Inserindo e exibindo um dependente:
+clienteEspecial.inserirDependente(new Cliente('Pedro', '789675456', new Conta('999')));
+console.log(clienteEspecial.listarDependentes());

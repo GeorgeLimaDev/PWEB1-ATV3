@@ -1,12 +1,13 @@
 class ClienteEspecial extends Cliente {
     constructor(nome, cpf, conta) {
         super(nome, cpf, conta);
+        this.dependentes = new Array;
     }
     inserirDependente(dependente) {
         this.dependentes.push(dependente);
     }
-    removerDependente(conta) {
-        const dependenteARemover = this.pesquisarDependente(conta);
+    removerDependente(cpf) {
+        const dependenteARemover = this.pesquisarDependente(cpf);
         if (dependenteARemover) {
             const indiceCliente = this.dependentes.indexOf(dependenteARemover);
             if (indiceCliente > -1) {
@@ -21,4 +22,12 @@ class ClienteEspecial extends Cliente {
     listarDependentes() {
         return this.dependentes;
     }
+    toString() {
+        let saida = '';
+        this.dependentes.forEach(dependente => {
+            saida += dependente.toString();
+        });
+        return saida;
+    }
+    ;
 }
